@@ -1,0 +1,409 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 21px 0px hsla(0, 0%, 0%, 0.05);
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+
+.logo {
+  margin: 16px 0 20px 148px;
+}
+
+.nav-container ul {
+  display: flex;
+}
+
+.right-side {
+  margin-right: 143px;
+}
+
+.right-side li,
+.left-side li {
+  display: inline-block;
+  margin: 27px 50px 22px 0;
+}
+
+.right-side li a,
+.left-side li a {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #000;
+}
+
+.right-side li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.left-side li a:hover,
+.right-side li a:hover {
+  color: #920303;
+  animation: 1.5s animation ease-out infinite;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  } 
+}
+
+.right-side button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  width: 97px;
+  height: 57px;
+  border: none;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin-top: 22px;
+  border-radius: 10px;
+  background-color: #920303;
+}
+
+.right-side button a,
+.swiper-text button a,
+.container-banner1-text button a,
+.container-banner2-text button a {
+  display: flex;
+  position: relative;
+  color: #fff;
+}
+
+.right-side button:hover,
+.swiper-text button:hover,
+.container-banner1-text button:hover {
+  background-color: #000;
+}
+
+.container-banner2-text button:hover {
+  background-color: #2072F3;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #920303;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+      margin: .1rem;
+  }
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links li {
+      text-align: center;
+  }
+
+  .navbar-links li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .right-side li a{
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider-logo {
+    width: 800px;
+    height: 100px;
+    position: relative;
+    display: flex;
+  }
+
+  .slide-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    animation: slideshow 10s linear infinite;
+  }
+
+  .slide-logo img {
+    padding: 0 30px 0 30px;
+  }
+
+  .swiper .mySwiper {
+  display: flex;
+  }
+
+  .container-img {
+    display: none;
+  }
+
+  .container-banners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: bannershow 20s linear infinite;
+  }
+
+}
+
+@keyframes bannershow {
+  0% {transform: translateX(50%);}
+  100% {transform: translateX(-150%);}
+}
+
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    flex-direction: row;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-text h1 {
+    width: 568px;
+    height: 130px;
+    margin: 0 0 28px 50px;
+    line-height: 65px;
+    text-align: left;
+  }
+
+  .swiper-text p {
+    width: 406px;
+    height: 75px;
+    line-height: 25px;
+    text-align: justify;
+    margin: 0 0 36px 50px;
+  }
+
+  .swiper-text h1 span {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .container-img {
+    width: 1108px;
+    height: 622px;
+    margin: 0 0 0 180px;
+  }
+
+  .swiper-text button {
+    text-decoration: none;
+    width: 204px;
+    height: 49px;
+    border: none;
+    font-size: 14.4px;
+    line-height: 14.4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #920303;
+    margin: 0 0 189px 50px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-logo {
+    width: 1920px;
+    height: 100px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-logo img {
+    padding: 0 65px 0 65px;
+}
+
+.container-banners {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-banner1 {
+  position: relative;
+  margin: 0 0.25rem 5rem 1.563rem;
+}
+
+.container-banner1-text {
+  position: absolute;
+  top: 99px;
+  left: 136px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 32px;
+  margin-bottom: 29px;
+}
+
+.container-banner1-text p,
+.container-banner2-text p {
+  font-size: 20px;
+  line-height: 32px;
+  width: 350px;
+}
+
+.container-banner1-text p span {
+  background-color: #000;
+}
+
+.container-banner1-text button,
+.container-banner2-text button {
+  width: 204px;
+  height: 49px;
+  border: none;
+  font-size: 14.4px;
+  line-height: 14.4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 32px;
+  border-radius: 10px;
+  background-color: #920303;
+}
+
+.container-banner2 {
+  position: relative;
+  margin: 0 0.25rem 5rem 1.563rem;
+}
+
+.container-banner2-text {
+  position: absolute;
+  color: #fff;
+  top: 82px;
+  left: 124px;
+}
+
+.container-banner2-text p span {
+  background-color: #920303;
+}
+
+.container-app {
+  margin-top: 14px;
+  justify-content: space-between;
+}
+
+.container-app img {
+  margin-right: 12px;
+}
